@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "BasicEffects.h"
 #include "GameFramework/Character.h"
 #include "MainCharacter.generated.h"
 
@@ -19,6 +20,23 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	// Mesh Component
+	UPROPERTY(EditAnywhere, Category = "Mesh")
+	class UStaticMeshComponent* MyBoxCharacter;
+
+	UPROPERTY(VisibleAnywhere, Category = "Jutsu")
+	USceneComponent* ProjectileSpot;
+
+	//UPROPERTY(EditAnywhere, Category = "Jutsu")
+	//TSubclassOf<ABasicEffects> Jutsu;
+
+	UFUNCTION(BlueprintCallable)
+	void FireBallJutsu();
+	
+	/*UPROPERTY(EditAnywhere, Category = "Jutsu")
+	TSubclassOf<ABasicEffects> Jutsu;*/
+
+	
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
