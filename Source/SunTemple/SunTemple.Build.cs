@@ -8,12 +8,9 @@ public class SunTemple : ModuleRules
     {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "PopcornFX" });
+        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" , "EnhancedInput" });
 
         PrivateDependencyModuleNames.AddRange(new string[] { });
-
-        PrivateIncludePaths.AddRange(new string[] {
-            System.IO.Path.Combine(GetModuleDirectory("PopcornFX"), "Private"), });
 
         // Uncomment if you are using Slate UI
         // PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
